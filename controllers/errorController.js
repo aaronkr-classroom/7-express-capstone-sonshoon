@@ -6,6 +6,10 @@
 /**
  * Listing 11.2 (p. 168)
  */
+exports.logErrors= (err,req,res,next) => {
+    console.error(err.stack);
+    next(err);
+};
 
 
 /**
